@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="3dp" >
+
+    <LinearLayout
+        android:id="@+id/ll_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bCancelAddWeght"
+            style="@style/ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:text="@android:string/cancel" />
+
+        <Button
+            android:id="@+id/bAddWeght"
+            style="@style/ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@android:string/ok" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_weight_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:text="@string/weight"
+        android:textAppearance="@style/TextKGStyle" />
+
+    <LinearLayout
+        android:id="@+id/ll_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_weight_title"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip" >
+
+        <EditText
+            android:id="@+id/add_weight_kg_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="3"
+            android:inputType="number"
+            android:textAppearance="@style/TextKGStyle" />
+
+        <TextView
+            android:id="@+id/add_weight_kg_comma_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/weight_separator"
+            android:textAppearance="@style/TextKGStyle" />
+
+        <EditText
+            android:id="@+id/add_weight_kg_decimal_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="2"
+            android:inputType="number"
+            android:text="@string/default_weight_decimal"
+            android:textAppearance="@style/TextKGStyle" />
+
+        <TextView
+            android:id="@+id/add_weight_kg_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dip"
+            android:text="@string/weight_unit"
+            android:textAppearance="@style/TextKGStyle"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_date_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_weight"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:text="@string/date"
+        android:textAppearance="@style/TextKGStyle" />
+
+    <LinearLayout
+        android:id="@+id/ll_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_buttons"
+        android:layout_below="@id/tv_date_title"
+        android:orientation="vertical" >
+
+        <DatePicker
+            android:id="@+id/dp_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:scaleX="0.8"
+            android:scaleY="0.8" />
+
+        <TimePicker
+            android:id="@+id/tp_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleX="0.8"
+            android:scaleY="0.8" />
+    </LinearLayout>
+
+</RelativeLayout>
